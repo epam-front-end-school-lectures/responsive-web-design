@@ -1,0 +1,106 @@
+/**
+ * Epam theme for reveal.js.
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url(../../lib/font/oswald/oswald.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+// =======================================================
+// PRIMARY COLORS
+$sharpBlue: #39C2D7;
+$limeGreen: #a3c644;
+// GRAPHITE: #464547
+// WHITE: #ffffff
+//
+// SECONDARY COLORS
+// RASPBERRY: #B22746
+
+$backgroundColor: #fff;
+
+$mainColor: #464547;
+$headingColor: #464547;
+
+$mainFontSize: 38px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Oswald', Helvetica, sans-serif;
+$headingTextShadow: none;
+$heading1TextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #39c2d7;
+$linkColorHover: lighten( $linkColor, 10% );
+$selectionBackgroundColor: lighten( $linkColor, 20% );
+
+$secondaryLinkColor: #7F993A;
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// Custom template ------------------------------
+@import "../template/custom";
+// ---------------------------------------------
+
+
+section.has-dark-background,
+section.has-dark-background-custom {
+    &, h1, h2, h3, h4, h5, h6 {
+        color: #fff;
+    }
+
+    a {
+        color: #fff;
+    }
+}
+
+.cover-page {
+    h1 {
+        text-shadow: 0 1px 10px rgba(#000, .3);
+    }
+
+    .lecture-date {
+        color: $sharpBlue;
+    }
+}
+
+.reveal {
+    blockquote {
+        margin-bottom: 2em;
+        padding-left: 5em;
+        width: auto;
+        box-shadow: none;
+        text-align: left;
+
+        &:before {
+            content: '“';
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(-20%);
+            color: $sharpBlue;
+            font-size: 10em;
+        }
+    }
+
+    .cite-author {
+        font-size: 0.8em;
+        text-align: right;
+    }
+}
