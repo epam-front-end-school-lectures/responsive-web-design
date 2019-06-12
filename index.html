@@ -40,8 +40,7 @@
 				<section class="has-dark-background-custom" data-state="cover-page" data-background="img/lake-view.jpg" data-background-size="cover">
 					<img width="204" height="75" class="plain" data-src="img/epam-logo.png" alt="EPAM">
 					<h1>Responsive Web Design</h1>
-					<p><small>by Olena Svietlova</small></p>
-					<p class="lecture-date"><small>February 26, 2016</small></p>
+					<p><small>by Viacheslav Stetsenko</small></p>
 				</section>
 
 				<!-- SECTION 1 -->
@@ -50,12 +49,12 @@
 					<aside class="notes">
 						В двух-трех словах как бы вы описали, что такое РВД?
 						It's a design and development approach
-					</aside>
+					</aside> 
 				</section>
 
 				<!-- SECTION 2 -->
 				<section data-transition="fade">
-					<h2>What problem does RWD solves?</h2>
+					<h2>What problem does RWD solve?</h2>
 					<aside class="notes">
 						Desktop computers -> (1024х768) fixed layout, pixel perfect design
 						Monitors of different resolution -> centered fixed layouts, flexible, elastic layouts
@@ -156,8 +155,9 @@
 						<h1>TARGET / CONTEXT = RESULT</h1>
 					</section>
 					<section data-background="img/flexible-block-width.png" data-background-size="contain"></section>
-					<section data-background="img/font-size-2.png" data-background-size="contain" data-background-transition="none"></section>
-					<section data-background="img/font-size-3.png" data-background-size="contain" data-background-transition="none"></section>
+					<section data-background="img/fluid-2.png" data-background-size="contain"></section>
+					<section data-background="img/em-rem-1.png" data-background-size="contain" data-background-transition="none"></section>
+					<section data-background="img/em-rem-2.png" data-background-size="contain" data-background-transition="none"></section>
 					<section>
 						<h2>Grid frameworks</h2>
 						<p class="fragment">HTML based frameworks require adding classes into markup<br>
@@ -166,7 +166,7 @@
 							<a href="http://getskeleton.com/">Skeleton</a>
 						</p>
 						<p class="fragment">Pure CSS based frameworks rely on pre-processor<br>
-							<a href="http://susy.readthedocs.org/en/latest/" target="_blank">Susy</a>,
+							<a href="https://oddbird.net/susy/" target="_blank">Susy</a>,
 							<a href="http://neat.bourbon.io/" target="_blank">Neat</a>,
 							<a href="http://zengrids.com/" target="_blank">Zen Grids</a>,
 							<a href="https://github.com/at-import/Singularity" target="_blank">Singularity</a>
@@ -196,7 +196,10 @@
 						</p>
 					</section>
 
-					<section data-background="img/media-query-example.png" data-background-size="contain">
+					<section data-background="img/media-html.png" data-background-size="contain">
+						<aside class="notes"><h2>Media query example</h2></aside>
+					</section>
+					<section data-background="img/media-css.png" data-background-size="contain">
 						<aside class="notes"><h2>Media query example</h2></aside>
 					</section>
 
@@ -221,8 +224,59 @@
 							<li class="fragment">Vector graphic</li>
 						</ul>
 					</section>
-					<section data-background="img/image-replaccement.png" data-background-size="contain"></section>
 					<section data-background="img/picture-tag.png" data-background-size="contain"></section>
+				</section>
+
+
+				<section>
+					<section id="use-calc">
+						<h2>Maaaan, use calc()</h2>
+					</section>
+					<section>
+						<h4>Power of calc()</h4>
+						<p>
+							The most useful ability of calc() is its ability to mix units, like percentages and pixels.						</p>
+					</section>
+					<section>
+						<h4>Use calc instead of percents</h4>
+						<pre><code>
+.thing {
+  width: 90%; /* fallback if needed */
+  width: calc(100% - 3em);
+}</code></pre>
+					</section>
+					<section>
+						<h4>Use calc instead of percents</h4>
+						<pre><code>
+.column-1-7 {
+   width: calc(100% / 7);
+}
+.column-2-7 {
+   width: calc(100% / 7 * 2);
+}
+.column-3-7 {
+   width: calc(100% / 7 * 3);
+}</code></pre>
+					</section>
+					<section>
+						<h4>Use calc to create gutters</h4>
+					</section>
+					<section data-background="img/gutter.png" data-background-size="contain">
+					</section>
+					<section>
+						<h4>creating gutters</h4>
+						<pre><code>
+.area-one {
+  width: 40%;
+  float: left;
+  margin-right: 1em;
+}
+
+.area-two {
+  width: calc(60% - 1em);
+  float: right;
+}</code></pre>
+					</section>
 				</section>
 
 				<!-- SECTION 12 -->
@@ -230,7 +284,7 @@
                     <h2>Meta viewport</h2>
 					<pre><code class="hljs" data-trim contenteditable>
                         &lt;meta name="viewport" content="width=device-width, initial-scale=1.0,
-                        maximum-scale=1.0, user-scalable=no">
+                        maximum-scale=1.0">
                     </code></pre>
                 </section>
 
@@ -276,7 +330,17 @@
 					</section>
 				</section>
 
-                <!-- SECTION 16 -->
+				<!-- SECTION 16 -->
+				<section>
+					<h2>BONUS</h2>
+					<ul>
+						<li><a href="https://www.youtube.com/watch?v=qOUtkN6M52M&feature=youtu.be">
+							Making Future Interfaces: Algorithmic Layouts</a>
+						</li>
+					</ul>
+				</section>
+
+                <!-- SECTION 17 -->
 				<section>
 					<h2>WHERE TO LEARN MORE?</h2>
 					<ul>
@@ -288,12 +352,12 @@
 					</ul>
 				</section>
 
-				<!-- SECTION 17 -->
+				<!-- SECTION 18 -->
 				<section style="text-align: left;">
 					<h1>THANK YOU!</h1>
 					<p>
 						Any other questions?<br>
-						<a href="mailto:olena_svietlova@epam.com">mailto: olena_svietlova@epam.com</a>
+						<a href="mailto:olena_svietlova@epam.com">mailto: viacheslav_stetsenko@epam.com</a>
 					</p>
 				</section>
 
